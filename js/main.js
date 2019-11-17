@@ -25,4 +25,5 @@ require(["index"],function(index){
     index.middleHover();
     index.downloadBig();
     index.bigHover();
+    index.topNav();
 })

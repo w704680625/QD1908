@@ -20,6 +20,8 @@
       height: 53px;
       padding: 0 18px 0 40px;
       float: left; }
+      .headerbox header ul .active a {
+        color: blue; }
       .headerbox header ul li {
         float: left; }
       .headerbox header ul li a {
@@ -78,6 +80,60 @@
         left: 24px;
         top: 5px;
         float: left; }
+
+.showbox {
+  position: fixed;
+  top: 53px;
+  z-index: 2;
+  width: 100%;
+  display: none; }
+  .showbox .show .top {
+    height: 57px;
+    background: #eee;
+    overflow: hidden; }
+    .showbox .show .top ul {
+      padding-left: 50px; }
+    .showbox .show .top .active {
+      border-bottom: 2px solid blue;
+      color: blue; }
+    .showbox .show .top ul dl {
+      float: left;
+      height: 34px;
+      margin-top: 22px;
+      padding: 0 25px; }
+      .showbox .show .top ul dl dt {
+        float: left;
+        width: 23px;
+        height: 23px;
+        padding-right: 10px; }
+        .showbox .show .top ul dl dt img {
+          width: 100%;
+          height: 100%; }
+      .showbox .show .top ul dl dd {
+        float: right; }
+  .showbox .show .bottom {
+    height: 300px;
+    background: #fff;
+    padding: 40px 0 50px 50px;
+    overflow: hidden; }
+    .showbox .show .bottom ul {
+      padding-left: 50px;
+      height: 300px;
+      overflow: hidden; }
+      .showbox .show .bottom ul li {
+        overflow: hidden; }
+      .showbox .show .bottom ul dl {
+        float: left;
+        height: 300px;
+        padding: 0 25px;
+        border-left: 1px solid #ccc;
+        color: gray; }
+        .showbox .show .bottom ul dl dt {
+          font-size: 22px;
+          font-weight: 800; }
+        .showbox .show .bottom ul dl dd {
+          padding-top: 20px;
+          font-size: 16px; }
 
 .banner {
   height: 560px;

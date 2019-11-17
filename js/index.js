@@ -283,6 +283,38 @@ define(["jquery"],function($){
             })
     
         };
+
+        // 顶部导航添加下拉
+        function topNav(){
+            $("header .check").mouseenter(function(){
+                $(this).addClass("active");
+                $(".showbox").show();
+                $(".show .top li").hide().eq($(this).index()).show();
+                $(".show .bottom li").hide().eq($(this).index()).show();
+            }).mouseleave(function(){
+                $(this).removeClass("active");
+            })
+            
+            $(".showbox").mouseleave(function(){
+                $("header ul li").removeClass("active");
+                $(".showbox").hide();
+            })
+            $("html").mouseleave(function(){
+                $(".showbox").hide();
+            })
+
+            $(".show .top li dl").mouseenter(function(){
+                $(".show .top li dl").removeClass("active");
+                $(this).addClass("active");
+                $(".show .bottom li").hide().eq($(this).index()).show();
+            })
+            $(".show .top").mouseleave(function(){
+                $(".show .top li dl").removeClass("active");
+                $(".show .top li .checkbox").addClass("active");
+            })
+        }
+
+
     return {
         downloadBanner: downloadBanner,
         bannerClick: bannerClick,
@@ -291,6 +323,7 @@ define(["jquery"],function($){
         downloadMiddle: downloadMiddle,
         middleHover: middleHover,
         bigHover: bigHover,
-        downloadBig: downloadBig
+        downloadBig: downloadBig,
+        topNav: topNav,
     }
 })

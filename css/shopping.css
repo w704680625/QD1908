@@ -15,7 +15,8 @@
 
 .navbox {
   height: 50px;
-  padding: 25px 0; }
+  padding: 25px 0;
+  border-bottom: 2px solid gray; }
   .navbox .nav {
     margin: 0 auto;
     width: 1200px; }
@@ -26,30 +27,218 @@
       .navbox .nav .logo img {
         width: 100%;
         height: 100%; }
-    .navbox .nav .right {
-      float: right;
-      position: relative; }
-      .navbox .nav .right .shopping-car {
-        height: 30px;
-        width: 30px;
-        padding: 10px 20px; }
-        .navbox .nav .right .shopping-car img {
-          width: 100%;
-          height: 100%; }
-      .navbox .nav .right .count {
-        color: #fff;
-        background: red;
-        width: 25px;
-        height: 25px;
-        text-align: center;
-        line-height: 25px;
-        border-radius: 50% 50% 50% 0%;
-        position: absolute;
-        top: -10px;
-        left: 48px; }
     .navbox .nav p {
-      float: right;
-      padding-right: 20px;
+      float: left;
+      padding-left: 20px;
       height: 50px;
       line-height: 50px;
       font-size: 24px; }
+
+.contentbox {
+  margin-top: 20px; }
+  .contentbox .content {
+    width: 1200px;
+    margin: 0 auto; }
+    .contentbox .content #ball {
+      width: 20px;
+      height: 20px;
+      background: black;
+      border-radius: 50%;
+      display: none;
+      position: absolute; }
+    .contentbox .content dl {
+      float: left;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      width: 158px;
+      margin: 20px;
+      border: 1px solid gray; }
+      .contentbox .content dl dt {
+        width: 80px;
+        height: 80px; }
+        .contentbox .content dl dt img {
+          width: 100%;
+          height: 100%; }
+      .contentbox .content dl .title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 5px; }
+      .contentbox .content dl .desc {
+        color: #bbbbbb;
+        font-size: 12px;
+        margin-bottom: 5px;
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical; }
+      .contentbox .content dl .price {
+        color: red;
+        font-weight: 800;
+        margin-bottom: 10px; }
+      .contentbox .content dl button {
+        background: blue;
+        border: none;
+        color: #fff;
+        margin-bottom: 20px;
+        margin-top: 10px; }
+
+#clear-btn {
+  display: block;
+  height: 50px;
+  width: 200px;
+  margin: 30px  auto  auto  auto;
+  background: blue;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600; }
+
+.footbox {
+  margin-top: 100px;
+  background: #272727; }
+  .footbox footer {
+    width: 1200px;
+    margin: 0 auto; }
+    .footbox footer .top {
+      height: 250px;
+      padding: 60px 0 70px 0;
+      border-bottom: 1px solid gray; }
+      .footbox footer .top .left {
+        float: left;
+        width: 660px; }
+        .footbox footer .top .left dl {
+          float: left;
+          padding-right: 70px; }
+          .footbox footer .top .left dl dt {
+            padding-bottom: 15px;
+            font-size: 18px; }
+            .footbox footer .top .left dl dt a {
+              color: #ccc; }
+          .footbox footer .top .left dl dd {
+            padding-bottom: 10px;
+            font-size: 14px; }
+            .footbox footer .top .left dl dd a {
+              color: #ccc; }
+      .footbox footer .top .middle {
+        width: 210px;
+        float: left; }
+        .footbox footer .top .middle ul {
+          padding-top: 20px; }
+          .footbox footer .top .middle ul li {
+            font-size: 14px;
+            padding-bottom: 10px; }
+            .footbox footer .top .middle ul li a {
+              color: #ccc; }
+      .footbox footer .top .right {
+        padding-left: 30px;
+        position: relative; }
+        .footbox footer .top .right p {
+          color: #ccc;
+          font-size: 18px;
+          text-align: center; }
+        .footbox footer .top .right .share img {
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          top: 80px;
+          left: 960px; }
+    .footbox footer .bottom {
+      height: 40px;
+      line-height: 40px;
+      color: #ccc;
+      font-size: 14px; }
+      .footbox footer .bottom .left {
+        float: left; }
+      .footbox footer .bottom .right {
+        float: right; }
+
+.side {
+  position: fixed;
+  top: 0px;
+  right: -200px;
+  z-index: 3;
+  background: yellow; }
+  .side .left {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background: gray;
+    right: 200px;
+    top: 300px; }
+    .side .left img {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 20px;
+      left: 10px; }
+    .side .left .count {
+      height: 30px;
+      width: 30px;
+      border-radius: 50% 50% 50% 0;
+      line-height: 30px;
+      text-align: center;
+      background: red;
+      color: #fff;
+      position: absolute;
+      top: 5px;
+      right: 0; }
+  .side .right {
+    height: 700px;
+    overflow-y: auto;
+    width: 200px;
+    right: 0;
+    top: 0;
+    padding-bottom: 20px; }
+    .side .right dl {
+      width: 160px;
+      display: flex;
+      flex-flow: column;
+      margin: 10px 20px;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid red; }
+      .side .right dl img {
+        height: 50px;
+        width: 50px; }
+      .side .right dl .title {
+        font-weight: 600;
+        margin-bottom: 5px; }
+      .side .right dl .desc {
+        color: #bbbbbb;
+        margin-bottom: 5px; }
+      .side .right dl .price {
+        color: red;
+        font-weight: 800;
+        margin-bottom: 5px; }
+      .side .right dl .si-count {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #bbbb;
+        margin-bottom: 5px; }
+        .side .right dl .si-count .si-left {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 20px;
+          background: #bbbb; }
+        .side .right dl .si-count .si-middle {
+          width: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #Fff; }
+        .side .right dl .si-count .si-right {
+          width: 20px;
+          background: #bbbb;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+      .side .right dl button {
+        background: gray;
+        border: none;
+        color: #fff; }

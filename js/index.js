@@ -1,4 +1,4 @@
-define(["jquery"],function($){
+define(["jquery","jquery-cookie"],function($){
     // 加载banner图
     function downloadBanner(){
         $.ajax({
@@ -314,6 +314,19 @@ define(["jquery"],function($){
             })
         }
 
+        // 加载购物车数量
+        function scNum(){
+            var cookieArr = JSON.parse($.cookie("shopping"));
+            if(cookieArr){
+                var sum = 0;
+                for(var i = 0; i < cookieArr.length; i++){
+                    sum += cookieArr[i].num
+                }
+                $(".shopping .car-count").html(sum);
+            }else{
+                $(".shopping .car-count").html(0);
+            }
+        }
 
     return {
         downloadBanner: downloadBanner,
@@ -325,5 +338,6 @@ define(["jquery"],function($){
         bigHover: bigHover,
         downloadBig: downloadBig,
         topNav: topNav,
+        scNum: scNum
     }
 })

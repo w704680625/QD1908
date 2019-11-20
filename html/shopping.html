@@ -4,28 +4,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>购物车</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/shopping.css">
-    
+    <script src="../js/require.js" async="true" defer data-main="../js/shopping-main.js"></script>
 </head>
 <body>
     <div class="headerbox">
         <header>
-            <a href="">返回首页</a>
-            <a href="">登录</a>
+            <a href="../index.html">返回首页</a>
+            <a href="login.html">登录</a>
         </header>
     </div>
     <div class="navbox">
         <div class="nav">
             <div class="logo"><img src="../images/logo.png" alt=""></div>
-            <div class="right">
-                <div class="shopping-car"><img src="../images/shopping-car.png" alt=""></div>
-                <div class="count">0</div>
-            </div>
-            <p>我的购物车</p>
+            <p>商品列表</p>
         </div>
     </div>
-    
+    <div class="contentbox">
+        <div class="content">
+            <div id="ball"></div>
+
+            <!-- <dl>
+                <dt><img src="../images/pic1.jpg" alt=""></dt>
+                <dd class = "title">拯救者刃9000 3代</dd>
+                <dd class="desc">RTX 2060显卡</dd>
+                <dd class="price">￥ 8499</dd>
+                
+                <button>加入购物车</button>
+            </dl>
+            <dl>
+                <dt><img src="../images/pic1.jpg" alt=""></dt>
+                <dd class = "title">拯救者刃9000 3代</dd>
+                <dd class="desc">RTX 2060显卡</dd>
+                <dd class="price">￥ 8499</dd>
+                
+                <button>加入购物车</button>
+            </dl>
+            <dl>
+                <dt><img src="../images/pic1.jpg" alt=""></dt>
+                <dd class = "title">拯救者刃9000 3代</dd>
+                <dd class="desc">RTX 2060显卡</dd>
+                <dd class="price">￥ 8499</dd>
+                
+                <button>加入购物车</button>
+            </dl>
+            <dl>
+                <dt><img src="../images/pic1.jpg" alt=""></dt>
+                <dd class = "title">拯救者刃9000 3代</dd>
+                <dd class="desc">RTX 2060显卡</dd>
+                <dd class="price">￥ 8499</dd>
+                
+                <button>加入购物车</button>
+            </dl>
+            <dl>
+                    <dt><img src="../images/pic1.jpg" alt=""></dt>
+                    <dd class = "title">拯救者刃9000 3代</dd>
+                    <dd class="desc">RTX 2060显卡</dd>
+                    <dd class="price">￥ 8499</dd>
+                    
+                    <button>加入购物车</button>
+                </dl>
+                <dl>
+                    <dt><img src="../images/pic1.jpg" alt=""></dt>
+                    <dd class = "title">拯救者刃9000 3代</dd>
+                    <dd class="desc">RTX 2060显卡</dd>
+                    <dd class="price">￥ 8499</dd>
+                    
+                    <button>加入购物车</button>
+                </dl>
+                <dl>
+                <dt><img src="../images/pic1.jpg" alt=""></dt>
+                <dd class = "title">拯救者刃9000 3代</dd>
+                <dd class="desc">RTX 2060显卡</dd>
+                <dd class="price">￥ 8499</dd>
+                <button>加入购物车</button>
+            </dl>
+            <dl>
+                <dt><img src="../images/pic1.jpg" alt=""></dt>
+                <dd class = "title">拯救者刃9000 3代</dd>
+                <dd class="desc">RTX 2060显卡</dd>
+                <dd class="price">￥ 8499</dd>
+                <button>加入购物车</button>
+            </dl> -->
+
+        </div>
+    </div>
+    <button id= "clear-btn">清空购物车</button>
+    <div class="footbox">
+            <footer>
+                <div class="top">
+                    <div class="left">
+                        <dl>
+                            <dt><a href="">关于联想</a></dt>
+                            <dd><a href="">投资者关系</a></dd>
+                            <dd><a href="">加入我们</a></dd>
+                            <dd><a href="">联系我们</a></dd>
+                            <dd><a href="">参观联想</a></dd>
+                            <dd><a href="">销售网点查询</a></dd>
+                            <dd><a href="">服务网点查询</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="">联想商城</a></dt>
+                            <dd><a href="">今日秒杀</a></dd>
+                            <dd><a href="">联想合伙人</a></dd>
+                            <dd><a href="">私人定制</a></dd>
+                            <dd><a href="">以旧换新</a></dd>
+                            <dd><a href="">积分商城</a></dd>                   
+                        </dl>
+                        <dl>
+                            <dt><a href="">联想服务</a></dt>
+                            <dd><a href="">驱动与软件下载</a></dd>
+                            <dd><a href="">联想知识库</a></dd>
+                            <dd><a href="">24小时智能客服</a></dd>
+                            <dd><a href="">保修配置查询</a></dd>
+                            <dd><a href="">服务政策查询</a></dd>
+                            <dd><a href="">上门快修</a></dd>
+                            <dd><a href="">延长保修</a></dd>
+                            <dd><a href="">联想IT管理服务</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href="">联想网站群</a></dt>
+                            <dd><a href="">联想创投</a></dd>
+                            <dd><a href="">聚享汇</a></dd>
+                            <dd><a href="">联想电脑管家</a></dd>
+                            <dd><a href="">联想超融合</a></dd>
+                            <dd><a href="">联想研究院</a></dd>
+                            <dd><a href="">智慧医疗</a></dd>
+                        </dl>
+                    </div>
+                    <div class="middle">
+                        <ul>
+                            <li><a href="">联想百应平台</a></li>
+                            <li><a href="">联想租赁商城</a></li>
+                            <li><a href="">联想企业网盘</a></li>
+                            <li><a href="">ThinkPad官网</a></li>
+                            <li><a href="">lecoo商城</a></li>
+                            <li><a href="">联想大数据</a></li>
+                            <li><a href="">联想商用官网</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <p>官方社交平台</p>
+                        <div class="share">
+                            <a href=""><img src="../images/share.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <p class="left">
+                        版权所有：1998-2019 联想集团 | 法律公告 | 隐私权政策 | 产品安全 
+                    </p>
+                    <p class="right"> 
+                        京ICP备11035381 | 京公网安备110108007970号 | 营业执照：91110108700000458B
+                    </p>
+                </div>
+            </footer>
+        </div>
+
+
+
+    <div class="side">
+        <div class="left">
+            <img src="../images/shopping-car.png" alt="">
+            <div class="count">0</div>
+        </div>
+        <div class="right">
+            <!-- <dl>
+                <dt><img src="../images/pic1.jpg" alt=""></dt>
+                <dd class = "title">拯救者刃9000 3代</dd>
+                <div class="si-count">
+                     <div class="si-left">-</div>
+                    <div class="si-middle">1</div>
+                    <div class="si-right">+</div>
+                </div>
+                <dd class="price">￥ 8499</dd>
+                <button>删除此商品</button>
+            </dl>
+            <dl>
+                    <dt><img src="../images/pic1.jpg" alt=""></dt>
+                    <dd class = "title">拯救者刃9000 3代</dd>
+                    <div class="si-count">
+                         <div class="si-left">-</div>
+                        <div class="si-middle">1</div>
+                        <div class="si-right">+</div>
+                    </div>
+                    <dd class="price">￥ 8499</dd>
+                    <button>删除此商品</button>
+                </dl> -->
+        </div>
+    </div>
 </body>
 </html>

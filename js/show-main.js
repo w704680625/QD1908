@@ -4,7 +4,7 @@ require.config({
         "jquery": "jquery-1.11.3",
         "jquery-cookie": "jquery.cookie",
         "parabola": "parabola",
-        "index": "index"
+        "show": "show"
     },
     shim: {
         //设置依赖关系  先引入jquery.js  然后在隐去jquery-cookie
@@ -16,16 +16,10 @@ require.config({
     }
 })
 
-require(["index"],function(index){
-    index.downloadBanner();
-    index.bannerClick();
-    index.downloadFamily();
-    index.familyHover();
-    index.downloadMiddle();
-    index.middleHover();
-    index.downloadBig();
-    index.bigHover();
-    index.topNav();
-    index.scNum();
 
+require(['show'],function(show){
+    show.tab();
+    show.bannerClick();
+    show.amplifier();
+    show.back();
 })

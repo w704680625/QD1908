@@ -7,6 +7,8 @@
     <title>注册</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/register.min.css">
+    <script src="../js/require.js" async="true" defer data-main="../js/re-main.js"></script>
+    
 </head>
 <body>
     <div class="headerbox">
@@ -15,8 +17,8 @@
                 <a href=""><img src="../images/small-logo.jpg" alt=""></a>
             </div>
             <ul>
-                <li><a href="">联想首页</a></li>
-                <li><a href="">商城</a></li>
+                <li><a href="../index.html">联想首页</a></li>
+                <li><a href="show.html">商城</a></li>
                 <li><a href="">品牌</a></li>
                 <li><a href="">服务</a></li>
                 <li><a href="">社区</a></li>
@@ -26,13 +28,18 @@
         </header>
     </div>
     <div class="contentbox">
-        <div class="content">
+        <div class="content"> 
             <div class="register">
                 <h1>注册联想会员</h1>
                 <div class="re1">
                     <span class= "active span-first">个人用户注册</span><span>企业用户注册</span>
                 </div>
                 <input type="text" placeholder="请输入手机号">
+                <input type="text" placeholder="请输入下面的验证码"> 
+                <div id="test">
+                    <canvas id="canvas"></canvas>
+                    <span>看不清楚，再换一张</span>
+                </div>
                 <input type="password" placeholder="输入密码，密码长度为8-20位字符">
                 <input type="password" placeholder="再次输入密码">
                 <div class="warning"></div>

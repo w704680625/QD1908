@@ -68,6 +68,22 @@
           float: left;
           margin-top: 20px;
           margin-left: 10px; }
+      .contentbox .content .login .register {
+        margin-top: 20px;
+        height: 20px;
+        padding-bottom: 20px; }
+        .contentbox .content .login .register span {
+          float: right;
+          height: 40px;
+          padding-right: 10px;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 40px; }
+        .contentbox .content .login .register a {
+          float: right;
+          color: red;
+          height: 40px;
+          line-height: 40px; }
       .contentbox .content .login .log2 {
         margin-top: 50px;
         height: 29px;

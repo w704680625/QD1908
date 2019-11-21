@@ -136,7 +136,7 @@ define(["jquery","jquery-cookie","parabola"],function($){
 
                         if($(this).html() == "+"){
                             cookieArr[i].num++;
-                        }else if(cookieArr[i].num == 1){
+                        }else if(cookieArr[i].num == 1 && $(this).html() == "-"){
                             alert("此商品数量不能再减少了");
                         }else{
                             cookieArr[i].num--;

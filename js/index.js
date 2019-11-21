@@ -2,7 +2,7 @@ define(["jquery","jquery-cookie"],function($){
     // 加载banner图
     function downloadBanner(){
         $.ajax({
-            url: "../data/topBanner.json",
+            url: "data/topBanner.json",
             success: function(obj){
                 var topBannerArr = obj;
                 for(var i = 0; i < topBannerArr.length; i++){
@@ -55,7 +55,7 @@ define(["jquery","jquery-cookie"],function($){
     // 加载个人及家庭产品数据
     function downloadFamily(){
         $.ajax({
-            url: "../data/family.json",
+            url: "data/family.json",
             success: function(obj){
                 var arr1 = obj.family;
 
@@ -148,7 +148,7 @@ define(["jquery","jquery-cookie"],function($){
 //  加载中小企业数据
         function downloadMiddle(){
             $.ajax({
-                url: "../data/middle.json",
+                url: "data/middle.json",
                 success: function(arr){
                     var arr1 = arr;
 
@@ -218,7 +218,7 @@ define(["jquery","jquery-cookie"],function($){
         //  加载政企大客户数据
         function downloadBig(){
             $.ajax({
-                url: "../data/big.json",
+                url: "data/big.json",
                 success: function(arr){
                     var arr1 = arr;
 

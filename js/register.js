@@ -1,6 +1,10 @@
 
 define(["jquery"],function($){
     var txt = null;
+    var res1 = null;
+    var res2 = null;
+    var res3 = null;
+    var res4 = null;
     // 绘制验证码
     function testDraw(){
         txt = testCode(4);
@@ -22,20 +26,26 @@ define(["jquery"],function($){
             var phone = $(this).val();
             if(!phone){
                 $(".register .warning").html("❌ 手机号输入不能为空").css("color","red");
+                return res1 = 0;
             }else if(!(/^1[34578]\d{9}$/.test(phone))){
                 $(".register .warning").html("❌ 手机号输入格式不正确").css("color","red");
+                return res1 = 0;
             }else{
                 $(".register .warning").html("✔ 手机号输入格式正确").css("color","green");
+                return res1 = 1;
             }
         })
         $(".register input").eq(1).blur(function(){
             var test = $(this).val();
             if(!test){
                 $(".register .warning").html("❌ 验证码输入不能为空").css("color","red");
+                return  res2 = 0;
             }else if(test.toLowerCase() != txt.toLowerCase()){
                 $(".register .warning").html("❌ 验证码输入不正确").css("color","red");
+                return res2 = 0;
             }else{
                 $(".register .warning").html("✔ 验证码输入正确").css("color","green");
+                return res2 = 1;
             }
         })
 
@@ -43,10 +53,13 @@ define(["jquery"],function($){
             var password = $(this).val();
             if(!password){
                 $(".register .warning").html("❌ 密码输入不能为空").css("color","red");
+                return res3 = 0;
             }else if(!(/^\w{8,20}$/.test(password))){
                 $(".register .warning").html("❌ 密码必须由8-20位字符组成").css("color","red");
+                return res3 = 0;
             }else{
                 $(".register .warning").html("✔ 该密码可以使用").css("color","green");
+                return res3 = 1;
             }
         })
         $(".register input").eq(3).blur(function(){
@@ -54,16 +67,24 @@ define(["jquery"],function($){
             var password = $(".register input").eq(2).val();
             if(!repassword){
                 $(".register .warning").html("❌ 请再次输入密码").css("color","red");
+                return res4 = 0; 
             }else if(repassword != password){
                 $(".register .warning").html("❌ 两次输入的密码不一致").css("color","red");
+                return res4 = 0;
             }else{
                 $(".register .warning").html("✔ 两次输入的密码一致").css("color","green");
+                return res4 = 1;
             }
         })
     }
     // 提交数据
     function postPhp(){
+        
         $(".register button").click(function(){
+            if(!(res1 || res2 || res3 || res4)){
+                alert("请先正确完成注册流程，再点击注册");
+                return false;
+            }
             var phone = $(".register input").eq(0).val();
             var password = $(".register input").eq(2).val();
             var repassword = $(".register input").eq(3).val();
@@ -81,8 +102,12 @@ define(["jquery"],function($){
                     if(obj.code){
                         alert(obj.message);
                     }else{
-                        alert(obj.message);
-                        location.replace("login.html");
+                        var res = confirm("注册成功，点击确定去登录，点击取消返回首页")
+                        if(res){
+                            location.replace("login.html");
+                        }else{
+                            location.replace("../index.html");
+                        }
                     }
                 },
                 error: function(msg){

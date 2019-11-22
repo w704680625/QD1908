@@ -94,7 +94,7 @@ define(["jquery","jquery-cookie","parabola"],function($){
                             $(`<dl>
                                 <dt><img src="${newArr[i].img}" alt=""></dt>
                                 <dd class = "title">${newArr[i].title}</dd>
-                                <dd class="price">${newArr[i].price}</dd>
+                                <dd class="price">￥ ${newArr[i].price}</dd>
                                 <div class="si-count"  id = "${newArr[i].id}">
                                     <div class="si-left">-</div>
                                     <div class="si-middle">${newArr[i].num}</div>
